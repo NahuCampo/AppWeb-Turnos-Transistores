@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+  {% for category, professionals in profes.items() %}
+  <h2>{{category}}</h2>
+  <ul class="list-group">
+   {% for professional in professionals %}
+   <li class="list-group-item">
+     <span>{{professional.name}}</span>
+     <a href="{{url_for('profesional', id=professional.id)}}" class="btn btn-primary btn-sm float-end">turnos</a>
+   </li>
+   {% endfor %}
+  </ul>
+  {% endfor %}
+ </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+{% endblock %}

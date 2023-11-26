@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <h1>Turnos</h1>
+    {% if largo == 0 %}
+      <p style="color: red;">No hay turnos asignados!</p>
+    {% endif %}
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Dia</h3>
+            {%for i in range(largo)%}
+             <p>{{dias[i]}}</p>
+            {% endfor %}
+        </div>
+        <div class="col-sm-4">
+            <h3>Profesional</h3>
+            {%for i in range(largo)%}
+             <p>{{profesionales[i]}}</p>
+            {% endfor %}
+        </div>
+        <div class="col-sm-4">
+            <h3>Hora</h3>
+            {%for i in range(largo)%}
+             <p>{{horas[i]}} {% if horas[i] <= 12 %} AM {% else %} PM {% endif %}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <h1>Appointments</h1>
+    <table class="table">
+        <thead>
+            <tr>
+               <th scope="col">Day</th>
+               <th scope="col">Hours</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+               <td>Monday</td>
+               <td>
+                   <button type="button" class="btn btn-success">09:00</button>
+                   <button type="button" class="btn btn-success">10:00</button>
+                   <button type="button" class="btn btn-success">11:00</button>
+                   <button type="button" class="btn btn-success">12:00</button>
+               </td>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>
+                    <button type="button" class="btn {% if disponibilidad %}btn-success{% else %}btn-secondary{% endif %}"{% if disponibilidad %}disabled{% endif %}>09:00</button>
+                    <button type="button" class="btn btn-gray">10:00</button>
+                    <button type="button" class="btn btn-success">11:00</button>
+                    <button type="button" class="btn btn-success">12:00</button>
+                </td>
+             </tr>
+        </tbody>
+    </table>
+</div> -->
+{% endblock %}

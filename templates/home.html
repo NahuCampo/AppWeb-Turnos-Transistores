@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Sys Turnos</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  <header>
+      <!-- Intro settings -->
+  <style>
+    /* Default height for small devices */
+    #intro-example {
+      height: 400px;
+    }
+
+    /* Height for devices larger than 992px */
+    @media (min-width: 992px) {
+      #intro-example {
+        height: 650px;
+      }
+    }
+  </style>
+    <nav class="navbar navbar-expand-lg navbar-light p-3" style="background-color: whitesmoke;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('index')}}"><img src="../static/imag/Bigsys color.png" alt="" style="margin: 0px -3px 10px; height: 30px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" aria-current="page" href="{{url_for('login')}}">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" aria-current="page" href="#">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Background image --> 
+  <div id="intro-example" class="p-5 text-center bg-image d-flex align-items-center justify-content-center"
+    style="background-image: url('../static/imag/Surgical-options-to-get-round-and-firm-buttocks.jpg'); background-repeat: no-repeat; background-size: cover;">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Bienvenido a Big Sys Turnos</h1>
+          <h5 class="mb-4">
+            Este sistema le permite gestionar sus turnos de manera eficiente. 
+            Puede reservar citas con profesionales, ver su historial de turnos y 
+            editar su perfil según sea necesario.
+          </h5>
+          <a class="btn btn-outline-light btn-lg m-2" href="{{url_for('login')}}"
+            role="button">Iniciar sesión</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Background image -->
+</header>
+   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

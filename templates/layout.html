@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Sys Turnos</title>
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <!--Css-->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light p-3" style="background-color: whitesmoke;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('index')}}"><img src="../static/imag/Bigsys color.png" alt="" style="margin: 10px -3px 10px; height: 30px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        
+          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item">
+                <a class="nav-link mx-2 active" aria-current="page" href="{{url_for('index')}}">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 active" aria-current="page" href="{{url_for('profesionales')}}">Profesionales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 active" aria-current="page" href="{{url_for('turnos')}}">Mis turnos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Perfil
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="{{url_for('editar')}}">Editar perfil</a></li>
+                  <li><a class="dropdown-item" href="{{url_for('logout')}}">Cerrar sesión</a></li>             
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </nav>
+
+        {% block content %}
+        {% endblock %}
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

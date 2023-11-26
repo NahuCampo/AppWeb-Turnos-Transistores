@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>{{nombreCompleto}}</h1>
+<p>{{descripcion}}</p>
+<br>
+<div class="container">
+    <h1>Turnos</h1>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+               <th scope="col">Dia</th>
+               <th scope="col">Hora</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+               <td>Lunes</td>
+               <td>
+                   <button type="button" class="btn btn-success">08:00</button>
+                   <button type="button" class="btn btn-success">09:00</button>
+                   <button type="button" class="btn btn-success">10:00</button>
+                   <button type="button" class="btn btn-success">11:00</button>
+                   <button type="button" class="btn btn-success">12:00</button>
+               </td>
+            </tr>
+            <tr>
+                <td>Martes</td>
+                <td>
+                    <button type="button" class="btn btn-secondary">08:00</button>
+                    <button type="button" class="btn {% if disponibilidad %}btn-success{% else %}btn-secondary{% endif %}"{% if disponibilidad %}disabled{% endif %}>09:00</button>
+                    <button type="button" class="btn btn-secondary">10:00</button>
+                    <button type="button" class="btn btn-success">11:00</button>
+                    <button type="button" class="btn btn-success">12:00</button>
+                </td>
+             </tr>
+             <tr>
+                <td>Miercoles</td>
+                <td>
+                    <button type="button" class="btn btn-success">08:00</button>
+                    <button type="button" class="btn btn-success">09:00</button>
+                    <button type="button" class="btn btn-success">10:00</button>
+                    <button type="button" class="btn btn-success">11:00</button>
+                    <button type="button" class="btn btn-success">12:00</button>
+                </td>
+             </tr>
+             <tr>
+                <td>Jueves</td>
+                <td>
+                    <button type="button" class="btn btn-success">08:00</button>
+                    <button type="button" class="btn btn-success">09:00</button>
+                    <button type="button" class="btn btn-success">10:00</button>
+                    <button type="button" class="btn btn-success">11:00</button>
+                    <button type="button" class="btn btn-success">12:00</button>
+                </td>
+             </tr>
+             <tr>
+                <td>Viernes</td>
+                <td>
+                    <button type="button" class="btn btn-success">08:00</button>
+                    <button type="button" class="btn btn-success">09:00</button>
+                    <button type="button" class="btn btn-success">10:00</button>
+                    <button type="button" class="btn btn-success">11:00</button>
+                    <button type="button" class="btn btn-success">12:00</button>
+                </td>
+             </tr>
+        </tbody>
+    </table>
+</div> 
+{% endblock %}
